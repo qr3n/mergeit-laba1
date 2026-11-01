@@ -63,7 +63,7 @@ void demonstrateCopying() {
     printProduct(*copy.findById(1));
 
     Warehouse assigned(1);
-    assigned = copy;
+    assigned = std::move(copy);
     std::cout << "После присваивания копированием: " << assigned.getSize() << " товаров\n";
 }
 
